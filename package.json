@@ -1,0 +1,61 @@
+{
+  "name": "@local/attention-alert",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Plays a chosen sound, shows a top-right floating notice, and flashes the conversation whenever it needs your answer or is interrupted.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "notification",
+    "alert",
+    "sound"
+  ],
+  "homepage": "https://github.com/bionexit/dsh-notify#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bionexit/dsh-notify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bionexit/dsh-notify/issues"
+  },
+  "author": "bionexit",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "test"
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings-general",
+        "@deepseek-ai/dsh-client-ui-workspace"
+      ]
+    }
+  }
+}

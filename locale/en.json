@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Conversation alerts",
+    "description": "Plays a chosen sound, shows a notice in the top-right corner, and flashes both the conversation and its session row in the left list when it needs your answer or is interrupted. Click the notice to jump into that conversation. Choose the sound, its file, volume, and timings in Settings > Alerts & sounds; the sound file stays in this browser."
+  }
+}

@@ -1,0 +1,6 @@
+# Bundle patch: one Host row loads ./index.js (a no-op plugin); the `dsh.client`
+# declaration in package.json makes the Web app load ./client.js, which owns
+# every visible behavior.
+- insert:
+    - id: attention-alert
+      name: '@local/attention-alert'
